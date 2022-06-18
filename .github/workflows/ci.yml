@@ -33,6 +33,8 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: release_package
+      - name: Installing packages
+        run: sudo apt-get install -y texlive-extra-utils
       - name: Run test
         run: make test
 
