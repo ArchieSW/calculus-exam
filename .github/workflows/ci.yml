@@ -1,0 +1,38 @@
+name: INTSUM CI
+
+on:
+  push:
+    branches: [main]
+    tags:
+      - "v*"
+  pull_request:
+    branches: [main]
+  
+jobs:
+  build_linux:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - name: Installing packages
+        run: sudo apt-get install -y texlive texlive-fonts-recommended texlive-lang-cyrillic texlive-latex-extra texlive-latex-recommended zip
+      - name: Build
+        run: make
+      - name: Pack
+        run: zip release.zip main.pdf
+      - uses: actions/upload-artifact@v2
+        with:
+          name: release_package
+          path: release.zip
+
+  release:
+    runs-on: ubuntu-20.04
+    needs: [build_linux]
+    if: ${{ github.ref_type == 'tag' }}
+    steps:
+      - name: Download package for Linux
+        uses: actions/download-artifact@v2
+        with:
+          name: release_package
+      - uses: softprops/action-gh-release@v1
+        with:
+          files: "*.zip"
