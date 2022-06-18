@@ -14,7 +14,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Installing packages
-        run: sudo apt-get install -y texlive texlive-fonts-recommended texlive-lang-cyrillic texlive-latex-extra texlive-latex-recommended zip
+        run: sudo apt-get install -y texlive-full texlive-fonts-recommended texlive-lang-cyrillic texlive-latex-extra texlive-latex-recommended zip
       - name: Build
         run: make
       - name: Pack
