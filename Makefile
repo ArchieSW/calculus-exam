@@ -9,4 +9,4 @@ all:
 
 .PHONY: clean
 clean: 
-	rm -f $(MAIN).aux $(MAIN).bbl $(MAIN).blg $(MAIN).log $(MAIN).out $(MAIN).synctex.gz $(MAIN).toc $(MAIN).pdf
+	rm -f $(MAIN).aux $(MAIN).bbl $(MAIN).blg $(MAIN).log $(MAIN).out $(MAIN).synctex.gz $(MAIN).toc $(MAIN).pdf *.log
