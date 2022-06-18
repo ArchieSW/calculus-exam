@@ -40,7 +40,7 @@ jobs:
 
   release:
     runs-on: ubuntu-20.04
-    needs: [build_linux test_linux]
+    needs: [build_linux, test_linux]
     if: ${{ github.ref_type == 'tag' }}
     steps:
       - name: Download package for Linux
