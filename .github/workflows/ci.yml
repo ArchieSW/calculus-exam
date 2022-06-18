@@ -24,9 +24,23 @@ jobs:
           name: release_package
           path: release.zip
 
-  release:
+  test_linux:
     runs-on: ubuntu-20.04
     needs: [build_linux]
+    steps:
+      - uses: actions/checkout@v2
+      - name: Download package
+        uses: actions/download-artifact@v2
+        with:
+          name: release_package
+      - name: Install package
+        run: make unpack
+      - name: Run test
+        run: make test
+
+  release:
+    runs-on: ubuntu-20.04
+    needs: [build_linux test_linux]
     if: ${{ github.ref_type == 'tag' }}
     steps:
       - name: Download package for Linux

@@ -15,6 +15,14 @@ format:
 test:
 	latexindent -k -s $(MAIN).tex
 
+.PHONY: pack
+pack: $(MAIN).pdf
+	zip $(MAIN).zip $(MAIN).pdf
+
+.PHONY: unpack
+unpack: $(MAIN).zip
+	unzip $(MAIN).zip
+
 .PHONY: clean
 clean: 
-	rm -f $(MAIN).aux $(MAIN).bbl $(MAIN).blg $(MAIN).log $(MAIN).out $(MAIN).synctex.gz $(MAIN).toc $(MAIN).pdf *.log
+	rm -f $(MAIN).aux $(MAIN).bbl $(MAIN).blg $(MAIN).log $(MAIN).out $(MAIN).synctex.gz $(MAIN).toc $(MAIN).pdf *.log *.bak* *.zip
