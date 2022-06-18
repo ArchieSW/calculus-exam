@@ -1,0 +1,216 @@
+% Этот шаблон документа разработан в 2014 году
+% Данилом Фёдоровых (danil@fedorovykh.ru) 
+% для использования в курсе 
+% <<Документы и презентации в \LaTeX>>, записанном НИУ ВШЭ
+% для Coursera.org: http://coursera.org/course/latex .
+% Исходная версия шаблона --- 
+% https://www.writelatex.com/coursera/latex/3.2
+
+\documentclass[a4paper,12pt]{article}
+
+%%% Работа с русским языком
+\usepackage{cmap}					% поиск в PDF
+\usepackage{mathtext} 				% русские буквы в фомулах
+\usepackage[T2A]{fontenc}			% кодировка
+\usepackage[utf8]{inputenc}			% кодировка исходного текста
+\usepackage[english,russian]{babel}	% локализация и переносы
+
+%%% Дополнительная работа с математикой
+\usepackage{amsmath,amsfonts,amssymb,amsthm,mathtools} % AMS
+\usepackage{icomma} % "Умная" запятая: $0,2$ --- число, $0, 2$ --- перечисление
+
+%% Номера формул
+%\mathtoolsset{showonlyrefs=true} % Показывать номера только у тех формул, на которые есть \eqref{} в тексте.
+%\usepackage{leqno} % Немуреация формул слева
+
+%% Свои команды
+\DeclareMathOperator{\sgn}{\mathop{sgn}}
+
+%% Перенос знаков в формулах (по Львовскому)
+\newcommand*{\hm}[1]{#1\nobreak\discretionary{}
+{\hbox{$\mathsurround=0pt #1$}}{}}
+
+%%% Работа с картинками
+\usepackage{graphicx}  % Для вставки рисунков
+\graphicspath{{images/}{images2/}}  % папки с картинками
+\setlength\fboxsep{3pt} % Отступ рамки \fbox{} от рисунка
+\setlength\fboxrule{1pt} % Толщина линий рамки \fbox{}
+\usepackage{wrapfig} % Обтекание рисунков текстом
+
+%%% Работа с таблицами
+\usepackage{array,tabularx,tabulary,booktabs} % Дополнительная работа с таблицами
+\usepackage{longtable}  % Длинные таблицы
+\usepackage{multirow} % Слияние строк в таблице
+
+%%% Теоремы
+\theoremstyle{plain} % Это стиль по умолчанию, его можно не переопределять.
+\newtheorem{theorem}{Теорема}[section]
+\newtheorem{proposition}[theorem]{Утверждение}
+ 
+\theoremstyle{definition} % "Определение"
+\newtheorem{corollary}{Следствие}[theorem]
+\newtheorem{problem}{Задача}[section]
+ 
+\theoremstyle{remark} % "Примечание" \newtheorem*{nonum}{Решение}
+%%% Программирование
+\usepackage{etoolbox} % логические операторы
+
+%%% Страница
+\usepackage{extsizes} % Возможность сделать 14-й шрифт
+\usepackage{geometry} % Простой способ задавать поля
+	\geometry{top=25mm}
+	\geometry{bottom=35mm}
+	\geometry{left=35mm}
+	\geometry{right=20mm}
+ %
+\usepackage{fancyhdr} % Колонтитулы
+ 	\pagestyle{fancy}
+ 	\renewcommand{\headrulewidth}{0mm}  % Толщина линейки, отчеркивающей верхний колонтитул
+ 	\rhead{Exam}
+ 	\chead{Calculus}
+ 	\lhead{\today}
+ 	% \cfoot{Нижний в центре} % По умолчанию здесь номер страницы
+
+\usepackage{setspace} % Интерлиньяж
+%\onehalfspacing % Интерлиньяж 1.5
+%\doublespacing % Интерлиньяж 2
+%\singlespacing % Интерлиньяж 1
+
+\usepackage{lastpage} % Узнать, сколько всего страниц в документе.
+
+\usepackage{soul} % Модификаторы начертания
+
+\usepackage{hyperref}
+\usepackage[usenames,dvipsnames,svgnames,table,rgb]{xcolor}
+\hypersetup{				% Гиперссылки
+    unicode=true,           % русские буквы в раздела PDF
+    pdftitle={Заголовок},   % Заголовок
+    pdfauthor={Автор},      % Автор
+    pdfsubject={Тема},      % Тема
+    pdfcreator={Создатель}, % Создатель
+    pdfproducer={Производитель}, % Производитель
+    pdfkeywords={keyword1} {key2} {key3}, % Ключевые слова
+    colorlinks=true,       	% false: ссылки в рамках; true: цветные ссылки
+    linkcolor=red,          % внутренние ссылки
+    citecolor=green,        % на библиографию
+    filecolor=magenta,      % на файлы
+    urlcolor=cyan           % на URL
+}
+
+%\renewcommand{\familydefault}{\sfdefault} % Начертание шрифта
+
+\usepackage{multicol} % Несколько колонок
+
+\author{Кутузов Дмитрий}
+\title{Ответы на билеты по математическому анализу}
+\date{\today}
+
+\begin{document} % конец преамбулы, начало документа
+
+\maketitle
+
+{
+  \hypersetup{linkcolor=black}
+  \tableofcontents
+  \newpage
+}
+
+\begin{center}
+\addcontentsline{toc}{section}{Производные высших порядков, правила их вычисления.}
+  \section*{Дифференцируемость и непрерывность функций одной переменной.}
+\end{center}
+
+\addcontentsline{toc}{subsection}{Производные высших порядков, правила их вычисления.}
+\begin{center}
+\subsection*{Производные высших порядков, правила их вычисления.}
+\end{center}
+
+\addcontentsline{toc}{subsection}{Производная от функции, заданной параметрически.}
+\begin{center}
+\subsection*{Производная от функции, заданной параметрически.}
+\end{center}
+
+\addcontentsline{toc}{subsection}{Производная от функции, заданной неявно. }
+\begin{center}
+\subsection*{Производная от функции, заданной неявно.                                                   }
+\end{center}
+
+\addcontentsline{toc}{subsection}{Дифференциалы высших порядков и их свойства. }
+\begin{center}
+\subsection*{Дифференциалы высших порядков и их свойства.                                               }
+\end{center}
+
+
+\addcontentsline{toc}{subsection}{Теорема Ферма. }
+\begin{center}
+\subsection*{Теорема Ферма.                                                                             }
+\end{center}
+
+
+\addcontentsline{toc}{subsection}{Теорема Ролля. }
+\begin{center}
+\subsection*{Теорема Ролля.                                                                             }
+\end{center}
+
+\addcontentsline{toc}{subsection}{Теорема Лагранжа. }
+\begin{center}
+\subsection*{Теорема Лагранжа.                                                                          }
+\end{center}
+
+\addcontentsline{toc}{subsection}{Теорема Коши. }
+\begin{center}
+\subsection*{Теорема Коши.                                                                              }
+\end{center}
+
+\addcontentsline{toc}{subsection}{Правила Лопиталя. }
+\begin{center}
+\subsection*{Правила Лопиталя.                                                                          }
+\end{center}
+
+\addcontentsline{toc}{subsection}{Формула Тейлора с различными формами остаточного члена. }
+\begin{center}
+\subsection*{Формула Тейлора с различными формами остаточного члена.                                   }
+\end{center}
+
+\addcontentsline{toc}{subsection}{Стандартные разложения по формуле Маклорена. }
+\begin{center}
+\subsection*{Стандартные разложения по формуле Маклорена.                                              }
+\end{center}
+
+\addcontentsline{toc}{subsection}{Условия постоянства функции на промежутке.}
+\begin{center}
+\subsection*{Условия постоянства функции на промежутке.                                                }
+\end{center}
+
+\addcontentsline{toc}{subsection}{Определение функции, монотонной на промежутке. Критерии строгой и нестрогой монотонности. }
+\begin{center}
+\subsection*{Определение функции, монотонной на промежутке. Критерии строгой и нестрогой монотонности. }
+\end{center}
+
+\addcontentsline{toc}{subsection}{Определение точки локального экстремума. Необходимое условие экстремума. Достаточные условия экстремума. }
+\begin{center}
+\subsection*{Определение точки локального экстремума. Необходимое условие экстремума. Достаточные условия экстремума. }
+\end{center}
+
+\addcontentsline{toc}{subsection}{Определение выпуклости функции на промежутке. Критерии выпуклости. }
+\begin{center}
+\subsection*{Определение выпуклости функции на промежутке. Критерии выпуклости.                                       }
+\end{center}
+
+\addcontentsline{toc}{subsection}{Точки перегиба. Необходимые и достаточные условия точки перегиба.   }
+\begin{center}
+\subsection*{Точки перегиба. Необходимые и достаточные условия точки перегиба.                                        }
+\end{center}
+
+\addcontentsline{toc}{subsection}{Асимптоты вертикальные, наклонные и горизонтальные.    }
+\begin{center}
+\subsection*{Асимптоты вертикальные, наклонные и горизонтальные.                                                      }
+\end{center}
+
+\addcontentsline{toc}{subsection}{Схема исследования функции и построения ее графика.    }
+\begin{center}
+\subsection*{Схема исследования функции и построения ее графика.                                                      }
+\end{center}
+
+
+\end{document} % конец документа
