@@ -366,8 +366,46 @@
 
 
 
+\newpage
 \addcontentsline{toc}{subsection}{Теорема Коши. }
 \subsection*{Теорема Коши.                                                                              }
+Пусть
+\begin{enumerate}
+	\item Функция $f$ и $g$ определены и непрерывны на отрезке $[a, b]$
+	\item $\forall x \in (a, b) \exists f'(x) \in \mathbf{R}, g'(x) \in \mathbf{R}, g'(x) \neq 0 $
+\end{enumerate}
+
+Тогда существует точка $c \in (a, b)$, такая что
+
+\[
+	\frac{f'(c)}{g'(c)} = \frac{f(b) - f(a)}{g(b) - g(a)}
+\]
+
+\textit{\textbf{Доказательство:}}
+
+1) Пусть $g(b) = g(a): \exists x_0 \in (a, b): g'(x_0) = 0$ (по теореме Ролля) $\Rightarrow$ противоречие с условием
+
+2) $g(b) \neq g(a)$.
+
+Введем вспомогательную функцию $F(x) = f(x) - \lambda g(x)$
+
+\[
+	F(a) = F(b): f(a) - \lambda g(a) = f(b) - \lambda g(b) \Rightarrow \lambda  = \frac{f(b) - f(a)}{g(b) - g(a)}
+\]
+
+\[
+	F(x) = f(x) - \frac{f(b) - f(a)}{g(b) - g(a)}g(x)
+\]
+
+$F(x)$ - удовлетворяет условия теореме Ролля (непрерывна на отрезке [a, b] дифференцируема на (a, b), F(a) = F(b))
+
+Тогда $\exists c \in (a, b): F'(c) = 0$, $F'(c) = f'(c) - \lambda g'(c) = 0$
+
+\[
+	\lambda = \frac{f'(c)}{g'(c)} = \frac{f(b) - f(a)}{g(b) - g(a)}
+\]
+
+Ч.т.д
 
 
 \addcontentsline{toc}{subsection}{Правила Лопиталя. }
