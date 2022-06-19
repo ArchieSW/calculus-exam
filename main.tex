@@ -408,9 +408,103 @@ $F(x)$ - удовлетворяет условия теореме Ролля (н
 Ч.т.д
 
 
+\newpage
 \addcontentsline{toc}{subsection}{Правила Лопиталя. }
 \subsection*{Правила Лопиталя.                                                                          }
 
+\textbf{\textit{Теорема 1.} Правило Лопиталя для $\frac{0}{0}$ в случае конечного промежутка.}
+
+Пусть:
+\begin{equation*}
+	\begin{aligned}
+		 & \text{(1) } f(x) \text{ и } g(x) \text{ определены и дифференцируемы в промежутке }(a, b)    \\
+		 & \text{(2) } \forall x \in (a, b): \; g'(x) \neq 0                                            \\
+		 & \text{(3) }  \lim_{x-> a + 0} f(x) =  \lim_{x-> a + 0} g(x) = 0                              \\
+		 & \text{(4) }  \exists \lim_{x-> a + 0} \dfrac{f'(x)}{g'(x)} \text{ конечный или бесконечный } \\
+	\end{aligned}
+\end{equation*}
+
+\begin{center}
+	$\Downarrow$
+\end{center}
+
+\[\lim_{x-> a + 0} \dfrac{f(x)}{g(x)} =\lim_{x-> a + 0} \dfrac{f'(x)}{g'(x)} \]
+
+
+
+\textbf{\textit{Теорема 2.} Правило Лопиталя для $\frac{0}{0}$ в случае бесконечного промежутка.}
+
+Пусть:
+\begin{equation*}
+	\begin{aligned}
+		 & \text{(1) } f(x) \text{ и } g(x) \text{ определены на луче }[a, +\infty)                                        \\
+		 & \text{(2) } f \text{ и } g \text{ дифференцируемы на } (a, +\infty), g'(x) \neq 0 \; \forall x \in (a, +\infty) \\
+		 & \text{(3) }  \lim_{x-> +\infty} f(x) =  \lim_{x-> +\infty} g(x) = 0                                             \\
+		 & \text{(4) }  \exists \lim_{x-> +\infty} \dfrac{f'(x)}{g'(x)} \text{ конечный или бесконечный }                  \\
+	\end{aligned}
+\end{equation*}
+
+\begin{center}
+	$\Downarrow$
+\end{center}
+
+\[\lim_{x-> +\infty} \dfrac{f(x)}{g(x)} =\lim_{x->+\infty } \dfrac{f'(x)}{g'(x)} \]
+
+\textbf{\textit{Теорема 3.} Правило Лопиталя для $\frac{\infty}{\infty}$ в случае конечного промежутка.}
+
+Пусть:
+\begin{equation*}
+	\begin{aligned}
+		 & \text{(1) } f(x) \text{ и } g(x) \text{ определены на интервале }(a, b)                                 \\
+		 & \text{(2) } f \text{ и } g \text{ дифференцируемы на } (a, b)  \; \forall x \in (a, b), \; g'(x) \neq 0 \\
+		 & \text{(3) }  \lim_{x-> a + 0} f(x) =  \lim_{x-> a + 0} g(x) = \infty                                    \\
+		 & \text{(4) }  \exists \lim_{x-> a + 0 } \dfrac{f'(x)}{g'(x)} \text{ конечный или бесконечный }           \\
+	\end{aligned}
+\end{equation*}
+
+\begin{center}
+	$\Downarrow$
+\end{center}
+
+\[\lim_{x-> a + 0} \dfrac{f(x)}{g(x)} =\lim_{x-> a + 0 } \dfrac{f'(x)}{g'(x)} \]
+
+
+
+\textbf{\textit{Теорема 4.} Правило Лопиталя для $\frac{\infty}{\infty}$ в случае бесконечного промежутка.}
+
+Пусть:
+\begin{equation*}
+	\begin{aligned}
+		 & \text{(1) } f(x) \text{ и } g(x) \text{ определены на луче }[a, +\infty)                                            \\
+		 & \text{(2) } f \text{ и } g \text{ дифференцируемы на } (a, +\infty)  \; \forall x \in (a, +\infty), \; g'(x) \neq 0 \\
+		 & \text{(3) }  \lim_{x-> + \infty} f(x) =  \lim_{x-> +\infty} g(x) = \infty                                           \\
+		 & \text{(4) }  \exists \lim_{x-> +\infty } \dfrac{f'(x)}{g'(x)} \text{ конечный или бесконечный }                     \\
+	\end{aligned}
+\end{equation*}
+
+\begin{center}
+	$\Downarrow$
+\end{center}
+
+\[\lim_{x-> + \infty} \dfrac{f(x)}{g(x)} =\lim_{x-> + \infty } \dfrac{f'(x)}{g'(x)} \]
+
+\textbf{\textit{Теорема 1 + 2.} Общая для $\frac{0}{0}$}
+
+\[
+	\lim_{x -> a} \frac{f(x)}{g(x)} = \frac{0}{0} = \lim_{x->a} \frac{f'(x)}{g'(x)}, a \in \overline{ \mathbb{R}}
+\]
+
+
+
+\textbf{\textit{Теорема 3 + 4.} Общая для $\frac{\infty}{\infty}$}
+
+\[
+	\lim_{x -> a} \frac{f(x)}{g(x)} = \frac{\infty}{\infty} = \lim_{x->a} \frac{f'(x)}{g'(x)}, a \in \overline{ \mathbb{R}}
+\]
+
+
+
+\newpage
 
 \addcontentsline{toc}{subsection}{Формула Тейлора с различными формами остаточного члена. }
 \subsection*{Формула Тейлора с различными формами остаточного члена.                                   }
