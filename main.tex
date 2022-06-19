@@ -959,6 +959,118 @@ $\text{2) множество решений уравнения } f'(x) = 0 \text
 \addcontentsline{toc}{subsection}{Правило интегрирования по частям в неопределенном интеграле. Примеры.}
 \subsection*{Правило интегрирования по частям в неопределенном интеграле. Примеры.}
 
+\subsubsection*{Формула интегрирования по частям.}
+
+\subsubsection*{Теорема.}
+Пусть функции $u(x)$ и $v(x)$ дифиренцируемы на $X$. Тогда, если найдется первообразная для $u'(v) \times v(x)$, и если найдется первообразная для $u(x) \times v'(x)$, тогда верна формула:
+
+\[
+	\int u(x) \cdot v'(x) dx = u(x) \cdot v(x) - \int v(x) \cdot u'(x) dx
+\]
+Или
+\[
+	\int u \cdot dv = u \cdot v - \int v du
+\]
+
+\subsubsection*{Доказательство:}
+\[ (u\cdot v)' = u' \cdot v + u \cdot v' \]
+\[ (u \cdot v)' dx = u' v dx + u v' dx      \]
+\[ \int (u \cdot v)'dx = \int u' v dx + \int u v' dx \]
+\[ u \cdot v = \int v du + \int u dv \]
+\[ \int u dv = u v - \int v du \; \blacksquare\]
+
+\subsubsection*{Метод интегрирования по частям целесообразно использовать в следующих случаях:}
+
+\begin{enumerate}
+	\item Когда подинтегральное выражение содержит множество следующих функций:
+	      \[ \ln{x} \; \ln{(f(x))} \; arc* \]
+	\item Когда подинтегральная функция имеет вид:
+	      \[ P(x) \times e^{ax}, P(x) \times \cos{ax}, P(x) \times \sin{ax} \]
+	      где P(x) - многочлен от $x$ ($u = P(x)$)
+	\item Циклические интегралы:
+	      \[ \int e^{ax} \times \sin{bx} \; dx, \int e^{ax} \cos{bx} \; dx \]
+	      \[ \int \sin{(\ln{x})} dx, \int \cos{(\ln{x})} dx \]
+	      при n - кратном интегрировании получается такой же интеграл. Решаем алгебраическое уравнение относительно того же интеграла.
+\end{enumerate}
+
+\textit{\textbf{Пример:}} Вычислить интеграл:
+\[ \int \arcsin{x} dx =
+	\begin{cases}
+		u = \arcsin{x} dx \\
+		dv = dx           \\
+		du = \dfrac{1}{\sqrt{1 - x^2}} dx
+	\end{cases} = \arcsin{x} \times x - \int \frac{xdx}{\sqrt{1 - x^2}}
+\]
+
+\[
+	\int \frac{x dx}{\sqrt{1 - x^2}} = - \frac{1}{2} \int \frac{d(-x^2)}{\sqrt{1 - x^2}} = - \frac{1}{2} \int \frac{d(-x^2 + 1)}{\sqrt{1 - x^2}} =
+\]
+
+\[ = - \frac{1}{2} \times 2 \sqrt{1 - x^2} + C = -\sqrt{1 - x^2} + C \]
+
+\textit{\textbf{Пример:}} Вычислите интеграл:
+
+\[
+	\int (x^2 + 3x) e^x dx =
+	\begin{cases}
+		u = x^2 + 3x    \\
+		dv = d^xdx      \\
+		du = (2x + 3)dx \\
+		v = e^x
+	\end{cases} =
+	\int udv = uv - \int vdu =
+\]
+
+\[
+	= (x^2 + 3x)e^x - \int e^x (2x + 3) dx =
+\]
+
+\[ = e^x \times x^2 + e^x \times 3x - e^x \times 2x - e^x \times 3x + 2 \times e^x =
+\]
+
+\[
+	= e^x (x^2 + x - 1) + C
+\]
+
+\textit{\textbf{Пример:}} Вычислите интеграл:
+
+\[
+	\int \sqrt{a^2 - x^2}dx =
+	\begin{cases}
+		u = \sqrt{a^2 - x^2}                   \\
+		du = \dfrac{-2x}{2\sqrt{a^2 - x^2}} dx \\
+		dv = dx                                \\
+	\end{cases}
+	=
+\]
+
+\[ = \sqrt{a^2 - x^2}x - \int x \dfrac{-2x}{2\sqrt{a^2 - x^2}} dx =
+\]
+
+\[
+	= \sqrt{a^2 - x^2}x + \int \frac{x^2 dx}{\sqrt{a^2 - x^2}} dx =
+\]
+
+\[ \sqrt{a^2 - x^2}x - \int \frac{a^2 - x^2 - a^2}{\sqrt{a^2 - x^2}} dx =
+\]
+\[
+	= \sqrt{a^2 - x^2}x - \int \sqrt{a^2 - x^2}dx + a^2 \int \frac{dx}{\sqrt{a^2 - x^2}}
+\]
+
+Пусть $ I = \int \sqrt{a^2 - x^2}dx $, тогда
+
+\[
+	I = x \sqrt{a^2 - x^2} - I + a^2 \arcsin{\frac{x}{a}} + C
+\]
+
+\[
+	2I = x\sqrt{a^2 - x^2} + a^2 \arcsin{\frac{x}{a}} + C
+\]
+
+\[
+	I = \frac{1}{2} x \sqrt{a^2 - x^2} + \frac{1}{2} a^2 \arcsin{\frac{x}{a}} + C
+\]
+
 \newpage
 \addcontentsline{toc}{subsection}{Рациональные функции. Правильные и неправильные дроби. Выделение целой части для неправильной дроби.}
 \subsection*{Рациональные функции. Правильные и неправильные дроби. Выделение целой части для неправильной дроби.}
