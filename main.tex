@@ -877,7 +877,17 @@ $\text{2) множество решений уравнения } f'(x) = 0 \text
 \end{enumerate}
 
 \subsubsection*{Метод внесения под дифференциал.}
-Кароче, ниче нигде не нашел, поэтому вот вам пример. На экзамене разбирайтесь сами :)
+
+\subsubsection*{Теорема}
+Пусть функция $t = \phi{x}$ определена и дифференцируема на промежутке $X$. $T$- множество значений этой функции, на которой определена функция $f(t)$
+
+Если на множестве $T$ функция $f(t)$ имеет первообразную $f(t)$, то на множестве $X$ вернa следующая формула:
+
+\[
+	\int f'(\phi(x)) d(\phi(x)) = \int f(t) dt = F(\phi(x)) + C
+\]
+
+Пример
 \[
 	\int e^{\sqrt{x}} \cdot \frac{dx}{\sqrt{x}}
 \]
@@ -894,6 +904,56 @@ $\text{2) множество решений уравнения } f'(x) = 0 \text
 \newpage
 \addcontentsline{toc}{subsection}{Замена переменной в неопределенном интеграле. Примеры.}
 \subsection*{Замена переменной в неопределенном интеграле. Примеры.}
+
+\subsubsection*{Теорема}
+Пусть функция $t = \phi(x)$ определена и дифференцируема на промежутке $X$. $T$- множество значений этой функции, на которой определена функция $f(t)$
+
+Если на множестве $T$ функция $f(t)$ имеет первообразную $f(t)$, то на множестве $X$ вернa следующая формула:
+
+\[
+	\int f(\phi(x)) \cdot \phi'(x) dx = \int f(t) dt = F(\phi(x)) + C
+\]
+
+\subsubsection*{Доказательство:}
+\[
+	(F(\phi(x)))' = F'(\phi(x)) \cdot \phi'(x) = f(\phi(x)) \cdot \phi'(x)
+\]
+
+\[
+	\int f(\phi(x)) \cdot \phi'(x) dx = F(\phi(x)) + C \; \blacksquare
+\]
+
+\subsubsection*{Примеры:}
+
+\[
+	\int e^{\sqrt{x}} \frac{dx}{\sqrt{x}}
+\]
+
+Пусть $\sqrt{x} = t$, тогда $dt = dx \frac{1}{2\sqrt{x}}$ отсюда $dx = 2\sqrt{x} dt = 2t dt$
+
+\[
+	I = \int \frac{e^t}{t} \cdot 2tdt = 2 \int e^t dt = 2e^t + C = 2 e^{\sqrt{x}} + C
+\]
+
+\subsubsection*{Другой пример:}
+
+\[
+	\int \frac{dx}{\sin x}
+\]
+
+Пусть
+\[
+	\sin x = \frac{2 \tan{ \frac{x}{2}}}{1 + \tan^2{\frac{x}{2}}}
+\]
+
+\[
+	\tan \frac{x}{2} = t, \; x = 2\arctan t, \; dx = d(2 \arctan t) = \frac{2dt}{1 + t^2}
+\]
+
+\[
+	I = \int \frac{ 2 \frac{1}{1 + t^2} dt }{ 2 \frac{t}{1 + t^2} } = \int \frac{dt}{t} = \ln |t| + C = \ln | \tan \frac{x}{2} | + C
+\]
+
 
 \newpage
 \addcontentsline{toc}{subsection}{Правило интегрирования по частям в неопределенном интеграле. Примеры.}
