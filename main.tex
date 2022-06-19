@@ -814,8 +814,8 @@ $\text{2) множество решений уравнения } f'(x) = 0 \text
 \subsubsection*{Определение первообразной.}
 Функция $F(x)$ называется первообразной для функции $f$ на промежутке $X$, если в каждой точке $x$ из промежутка $X$:
 \begin{enumerate}
-    \item $F$ является дифференцируемой (при этом, если точка $x$ - конец промежутка $X$, то в ней должно существовать соответствующая односторонняя производная)
-    \item $F'(x) = f(x)$
+	\item $F$ является дифференцируемой (при этом, если точка $x$ - конец промежутка $X$, то в ней должно существовать соответствующая односторонняя производная)
+	\item $F'(x) = f(x)$
 \end{enumerate}
 
 \subsubsection*{Определение неопределенного интеграла.}
@@ -824,35 +824,35 @@ $\text{2) множество решений уравнения } f'(x) = 0 \text
 \subsubsection*{Свойства неопределенного интеграла.}
 
 \begin{enumerate}
-    \item \[ \int dF(x) = F(x) + C \] 
-        Неопределенный интеграл от дифференциала некоторой функции равен сумме этой функции и произвольный постоянной.
+	\item \[ \int dF(x) = F(x) + C \]
+	      Неопределенный интеграл от дифференциала некоторой функции равен сумме этой функции и произвольный постоянной.
 
-        \textit{\textbf{Доказательство:}} $\int dF(x) = \int F'(x)dx = \int f(x)dx = F(x) + C$ Чтд
+	      \textit{\textbf{Доказательство:}} $\int dF(x) = \int F'(x)dx = \int f(x)dx = F(x) + C$ Чтд
 
-    \item \[ d \left( \int f(x) dx \right) = f(x)dx  \]
-        Дифференциал от неопределенного интеграла равен подынтегральному выражению. 
+	\item \[ d \left( \int f(x) dx \right) = f(x)dx  \]
+	      Дифференциал от неопределенного интеграла равен подынтегральному выражению.
 
-        \textit{\textbf{Доказательство:}} $d\left( \int f(x)dx \right) = d \left( F(x) + C \right) = F'(x) = f(x)dx$ Чтд
-        
-    \item \[ \int k \cdot f(x) dx = k \cdot \int f(x) dx \]
-        Постоянный множитель можно выносить за знак интеграла.
+	      \textit{\textbf{Доказательство:}} $d\left( \int f(x)dx \right) = d \left( F(x) + C \right) = F'(x) = f(x)dx$ Чтд
 
-        \textit{\textbf{Доказательство:}} $\int (k \cdot f(x)) dx = k \cdot F(x) + C$
+	\item \[ \int k \cdot f(x) dx = k \cdot \int f(x) dx \]
+	      Постоянный множитель можно выносить за знак интеграла.
 
-        $k \cdot \int f(x) dx = k \cdot F(x) + C = k \cdot F(x) + k \cdot C = K\cdot F(x) + C$ Чтд
+	      \textit{\textbf{Доказательство:}} $\int (k \cdot f(x)) dx = k \cdot F(x) + C$
 
-    \item \[ \int (f(x) + g(x)) dx = \int f(x) dx + \int g(x) dx \]
-        Неопределенный интеграл от суммы конечного числа непрерывных функций равен сумме интегралов.
+	      $k \cdot \int f(x) dx = k \cdot F(x) + C = k \cdot F(x) + k \cdot C = K\cdot F(x) + C$ Чтд
 
-        \textit{\textbf{Доказательство:}} Пусть $F(x)$ - первообразная для функции $f(x)$, $G(x)$ - первообразная для функции $g(x)$ 
+	\item \[ \int (f(x) + g(x)) dx = \int f(x) dx + \int g(x) dx \]
+	      Неопределенный интеграл от суммы конечного числа непрерывных функций равен сумме интегралов.
 
-        Тогда $F(x) + G(x)$ - первообразная для $f(x) + g(x)$ \[ \int (f(x) + g(x))dx = F(x) + G(x) + C \]
+	      \textit{\textbf{Доказательство:}} Пусть $F(x)$ - первообразная для функции $f(x)$, $G(x)$ - первообразная для функции $g(x)$
 
-        \[ \begin{cases}
-&\int f(x)dx = F(x) + C \\
-&\int g(x) dx = G(x) + C
-        \end{cases} \Rightarrow \int (f(x) + g(x))dx = \int f(x)dx + \int g(x) dx\]
-        Чтд
+	      Тогда $F(x) + G(x)$ - первообразная для $f(x) + g(x)$ \[ \int (f(x) + g(x))dx = F(x) + G(x) + C \]
+
+	      \[ \begin{cases}
+			       & \int f(x)dx = F(x) + C  \\
+			       & \int g(x) dx = G(x) + C
+		      \end{cases} \Rightarrow \int (f(x) + g(x))dx = \int f(x)dx + \int g(x) dx\]
+	      Чтд
 \end{enumerate}
 
 
@@ -860,6 +860,36 @@ $\text{2) множество решений уравнения } f'(x) = 0 \text
 \newpage
 \addcontentsline{toc}{subsection}{Таблица интегралов. Метод внесения под дифференциал.}
 \subsection*{Таблица интегралов. Метод внесения под дифференциал.}
+
+\begin{enumerate}
+	\item \[ \int x^{\alpha} dx = \frac{x^{\alpha + 1}}{\alpha + 1} + C \]
+	\item \[ \int a^x dx = \frac{a^x}{\ln a} \]
+	\item \[ \int \sin x dx = - \cos x + C \]
+	\item \[ \int \frac{dx}{\sqrt{a^2 + x^2}} = \arcsin \frac{x}{a} + C \]
+	\item \[ \int \frac{dx}{x} = \ln |x| +C \]
+	\item \[ \int e^x dx = e^x + C \]
+	\item \[ \int \cos x dx = \sin x + C \]
+	\item \[ \int \frac{dx}{x^2 + a^2} = \frac{1}{a} \arctan \frac{x}{a} +C \]
+	\item \[ \int \frac{dx}{\cos^2x} = \tan x + C \]
+	\item \[ \int \frac{dx}{\sin^2x} = - \cot x + C \]
+	\item \[ \int \frac{dx}{x^2 + 1} = \arctan x + C \]
+	\item \[ \int \frac{dx}{\sqrt{1 - x^2}} = \arcsin x + C \]
+\end{enumerate}
+
+\subsubsection*{Метод внесения под дифференциал.}
+Кароче, ниче нигде не нашел, поэтому вот вам пример. На экзамене разбирайтесь сами :)
+\[
+	\int e^{\sqrt{x}} \cdot \frac{dx}{\sqrt{x}}
+\]
+Потом мы понимаем, что можно внести $\sqrt{x}$ под дифференциал:
+\[
+	\frac{1}{\sqrt{x}} dx = 2d\sqrt{x}
+\]
+ну и заносим чо.
+\[
+	I = 2 \int e^{\sqrt{x}} d \sqrt{x} = 2 e^{\sqrt{x}} + C
+\]
+
 
 \newpage
 \addcontentsline{toc}{subsection}{Замена переменной в неопределенном интеграле. Примеры.}
