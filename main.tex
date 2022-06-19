@@ -264,8 +264,35 @@
 \addcontentsline{toc}{subsection}{Теорема Ферма. }
 \subsection*{Теорема Ферма.                                                                             }
 
+Пусть выполняются следующие условия:
+
+\begin{enumerate}
+	\item Функция определена на промежутке $X$
+	\item $x_0$ - внутренняя точка промежутка $X$
+	\item функция в точке $x_0$ принимает наибольшее значение, т.е. $f(x) \leq f(x_0)$ для всех точек из промежутка $X$
+	\item Существует конечная производная в точке $x_0$
+\end{enumerate}
+\[ \textbf{Тогда } f'(x_0) = 0 \]
+
+\textit{\textbf{Доказательство:}}
+
+\[
+	f'(x_0) = \lim_{\Delta x \rightarrow 0} \frac{f(x_0 + \Delta x) - f(x_0)}{\Delta x} = A
+\]
+
+По теории о связи существования предела и односторонних пределов:
+
+\[
+	\exists f'(x_0) = A \in \mathbf(R) \Leftrightarrow \exists f'_-(x_0) = f'_+(x_0) = A
+\]
+
+\[
+	f'_-(x_0) = f'_+(x_0) = \lim_{\Delta x \rightarrow 0 + 0} \frac{f(x_0 + \Delta x) - f(x_0)}{\Delta x} = f'(x_0) = 0
+\]
+Что и требовалось доказать
 
 
+\newpage
 \addcontentsline{toc}{subsection}{Теорема Ролля. }
 \subsection*{Теорема Ролля.                                                                             }
 
