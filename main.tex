@@ -1310,6 +1310,73 @@ $t^3 = \frac{1 - x}{1 + x}$,
 \subsection*{Подстановки Эйлера.                                                                          }
 \addcontentsline{toc}{subsection}{Подстановки Эйлера.                                                                          }
 
+вычисления интеграла вида:
+
+\[
+	\int R(x, \sqrt{ax^2 + bx + c}) dx
+\]
+
+\subsubsection*{1 случай при a > 0}
+
+В этом случае делаем замену $\sqrt{ax^2 + bx + c} = \sqrt{a}x + t$, где перед слагаемыми $\sqrt{a}x$ и $t$ могут стоять произвольные знаки плюс или минус.
+
+\[ x = \frac{t - c^2}{b - 2 \sqrt{a}t} \]
+
+\[
+	\sqrt{ax^2 + bx + c} = \frac{- \sqrt{a}t^2 + bt - \sqrt{a}c}{b - 2\sqrt{a}t}
+\]
+
+\[
+	dx =  \frac{-2 \sqrt{a}t^2 + 2bt - 2\sqrt{a}c}{(b - 2\sqrt{a}t)^2} dt
+\]
+
+итоговый интеграл примет вид:
+
+\[
+	I = \int R \left(\frac{t^2 - c}{b - 2\sqrt{a}t}, \frac{-\sqrt{a}t^2 + bt - \sqrt{a}t}{b - 2\sqrt{a}t} \right) \frac{-2\sqrt{a}t^2 + 2bt - 2\sqrt{a}c}{(b - 2 \sqrt{a}t)^2}dt
+\]
+
+\subsubsection*{2 случай при c > 0}
+
+В этом случае делаем замену
+
+\[
+	\sqrt{ax^2 + bx + c} = xt + \sqrt{c}
+\]
+
+Тогда
+
+\[
+	x = \frac{2\sqrt{c} t - b}{a - t^2}
+\]
+
+\[
+	\sqrt{ax^2 + bx + c} = \frac{2\sqrt{c} t^2 - bt}{a - t^2} + \sqrt{c}
+\]
+
+\[
+	dx = \frac{2\sqrt{c}(a - t^2) + 2t(2\sqrt{c}t - b)}{(a - t^2)^2} dt
+\]
+
+\subsubsection*{3 случай $D = b^2 - 4ac > 0$}
+
+Уравнение $ax^2 + bx + c = 0$ имеет два различных действительных корня $x_1$ и $x_2$
+делаем замену $\sqrt{ax^2 + bx + c} = t(x - x_1)$
+
+\[
+	x = \frac{ax_2 - t^2 x_1}{a - t^2}
+\]
+
+\[
+	\sqrt{ax^2 + bx + c} = \frac{a(x_2 - x_1)t}{a - t^2}
+\]
+
+\[
+	dx = \frac{-2tx_1(a - t^2) + 2t(ax_2 - t^2 x_1)}{(a - t^2)^2} dt
+\]
+
+
+
 \newpage
 \subsection*{Интегрирование дифференциального бинома.                                                     }
 \addcontentsline{toc}{subsection}{Интегрирование дифференциального бинома.                                                     }
