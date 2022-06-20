@@ -1381,6 +1381,27 @@ $t^3 = \frac{1 - x}{1 + x}$,
 \subsection*{Интегрирование дифференциального бинома.                                                     }
 \addcontentsline{toc}{subsection}{Интегрирование дифференциального бинома.                                                     }
 
+Дифференциальный бином или биномиальный дифференциал, это интеграл вида:
+
+\[
+	I = \int x^m \cdot (a + bx^n)^p dx
+\]
+где $m,n,p \in Q$; $a, b \in \mathbf{R}$
+
+\begin{enumerate}
+	\item Число $p$ является целым $(p \in \mathbf{Z})$
+	      В этом случае делаем замену \[ t = x^{\frac{1}{\lambda}} = \sqrt[\lambda]{x} \]
+	      $\lambda$ - НОД дробей $m, n$
+	\item $p \notin \mathbf{Z}, \frac{m+1}{n} \in \mathbf{Z}$. Замена \[ t = (a + bx^n)^{\frac{1}{\lambda}} \]
+	      Где $\lambda$ - знаменатель дроби $p$
+	\item $p \notin \mathbf{Z}, \frac{m+1}{n} + p \in \mathbf{Z} $
+	      Замена
+	      \[ t = (ax^{-n} + b)^{\frac{1}{\lambda}} \]
+	      где $\lambda$ - знаменатель дроби $p$
+\end{enumerate}
+
+
+
 \newpage
 \subsection*{Вычисление интегралов от тригонометрических функций.                                         }
 \addcontentsline{toc}{subsection}{Вычисление интегралов от тригонометрических функций.                                         }
