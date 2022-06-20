@@ -1152,6 +1152,17 @@ $\text{2) множество решений уравнения } f'(x) = 0 \text
 \subsection*{Интегрирование простейших дробей.}
 \addcontentsline{toc}{subsection}{Интегрирование простейших дробей.}
 
+\begin{enumerate}
+	\item \[ \int \frac{A}{x - a}dx = A \cdot \ln|x - a| + C \]
+	\item \[ \int \frac{A}{(x-a)^k}dx = \frac{A}{1 - k} \cdot \frac{1}{(x - a)^{k - 1}} + C \]
+	\item Данный способ был описан в учебнике Кудрявцева. Взял его, а не тот, что был на лекции, так как он проще.
+	      \[ \int \frac{Ax + B}{x^2 + px + q} = U \cdot \int \frac{dx}{x^2 + px + q} + V \cdot \int \frac{2x + p}{x^2 + px + q}dx \]
+	      Находим коэффициенты $U$ и $V$ и решаем простейшие дроби. Во втором случае числитель можно занести под знак дифференциала и получится логорифм.
+	\item \[ \int  \frac{Mx + N}{(x^2 + px + q)^n dx} = \frac{M}{2} \int \frac{(2x + p)dx}{(x^2 + px + q)^n} + \left( N - \frac{Mp}{2} \right) \int \frac{dx}{(x^2 + px + q)^n} =   \]
+	      \[ = \frac{M}{2} \frac{(x^2 + px + q)^{1 - n}}{1 - n} + \left( N - \frac{Mp}{2} \right) \int \frac{dx}{\left( (x + \frac{p}{2})^2  + q - \frac{p^2}{4}\right)^n}  \]
+	      Последний интеграл решается линейной подстановкой $t = x + \frac{p}{2}$ и приводится к рекурсивному рекурентному интегралу.
+\end{enumerate}
+
 \newpage
 \subsection*{Алгоритм вычисления интеграла от рациональной функции.}
 \addcontentsline{toc}{subsection}{Алгоритм вычисления интеграла от рациональной функции.}
