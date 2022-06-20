@@ -1201,6 +1201,111 @@ $\text{2) множество решений уравнения } f'(x) = 0 \text
 \subsection*{Интегрирование дробно-линейных иррациональных функций.                                       }
 \addcontentsline{toc}{subsection}{Интегрирование дробно-линейных иррациональных функций.                                       }
 
+Рассмотрим интеграл вида
+
+\[
+	\int R\left(x, \sqrt{\frac{ax + b}{cx + e}} \right) dx, m = 2, 3, \dots, a/c \neq b/e
+\]
+
+Делаем замену
+
+\[
+	t = \sqrt{\frac{ax + b}{cx + e}}
+\]
+
+рационализирует интеграл
+
+x и dx выразим через t,
+
+\[
+	t^m = \frac{ax + b}{cx + e}; cxt^m + et^m = ax + b;
+\]
+
+\[
+	x(et^m - a) = b - et^m
+\]
+
+\[
+	x = \frac{b - et^m}{ct^m - a}
+\]
+
+\[
+	dx = \frac{-ent^{m-1}(ct^m - a) - (b - et^m)cmt^{m-1}}{(ct^m  - a)^2} dt
+\]
+
+\[
+	dx = \frac{m(ae - bc)t^{m-1}}{(ct^m - a)^2}dt
+\]
+
+Подставим в интеграл:
+
+\[
+	I = \int R(t, \frac{b - et^m}{ct^m - a}) \frac{m(ae - bc)t^{m-1}}{(ct^m - a)^2}dt
+\]
+
+\textit{\textbf{Пример}}
+
+\[
+	\int \sqrt{\frac{1 - x}{1 + x}} \frac{dx}{x}
+\]
+
+Замена: $t = \sqrt{\frac{1 - x}{1 + x}}$
+
+
+$t^3 = \frac{1 - x}{1 + x}$,
+
+\[
+	1 - x = t^3(1 + x) = t^3 + xt^3
+\]
+
+\[
+	1 - t^3 = xt^3 + x = x(t^3 + 1)
+\]
+
+\[ x = \frac{1 - t^3}{1 + t^3} \]
+
+\[
+	dx = \frac{3t^2(1 + t^3) - 3t^2(1 - t^3)}{(1 + t^3)^2} dt = \frac{-6t^2}{(1 + t^2)^2}dt
+\]
+
+Подставляем в интеграл:
+
+\[
+	\int \frac{t(1 + t^3)}{1 - t^3} \frac{t^2}{(1 + t^3)^2}dt = -6\int \frac{t^3}{(1 - t^3)(1 _ t^3)}dt =
+\]
+
+\[
+	\frac{t^3}{(1 - t^3)(1 _ t^3)}dt = \frac{t^3}{(1 - t)(1 + t + t^2)(1 + t)(1 - t + t^2)}
+\]
+
+дальше раскладываем как рациональную дробь...
+
+\textit{\textbf{Пример:}}
+
+\[
+	I = \int \frac{dx}{\sqrt{x} + \sqrt{x}}
+\]
+
+\[ \text{НОК}(2, 3) = 6 \]
+
+Замена:
+
+\[ \sqrt{x} = t, x = t^6, dx = 6t^5dt \]
+
+\[
+	\int \frac{6t^5dt}{t^3 + t^2} = \int \frac{6t^3dt}{t + 1}
+	=
+\]
+
+\[
+	= 6 \int (t^2 - t + 1) - \frac{1}{t + 1}dt = 2 t^3 - 3t^2 + 6t - 6 ln|t + 1| + C
+\]
+
+И обратная замена в x
+
+
+
+
 \newpage
 \subsection*{Подстановки Эйлера.                                                                          }
 \addcontentsline{toc}{subsection}{Подстановки Эйлера.                                                                          }
