@@ -285,6 +285,8 @@
 \end{enumerate}
 \[ \textbf{Тогда } f'(x_0) = 0 \]
 
+\textit{\textbf{Замечание:}} Теорема также верна, если функция в точке $x_0$ принимает наименьшее значение.
+
 \textit{\textbf{Доказательство:}}
 
 \[
@@ -364,7 +366,7 @@
 	\lambda = \frac{f(b) - f(a)}{b - a}
 \]
 
-То есть \[F(x) = f(x) - \frac{f(b) - f(a)}{b - a}\]
+То есть \[F(x) = f(x) - \frac{f(b) - f(a)}{b - a} \cdot x\]
 
 Видим, что функция $F(x)$ удовлетворяет условиям теоремы Ролля: непрерывна на $[a, b]$ как разность двух непрерывных функций, дифференцируема на интегрвале как разность двух дифференцируемых функций, и $F(a) = F(b)$. Значит по теореме Ролля $\exists c \in (a, b): F'(c) = 0$.
 
@@ -754,8 +756,8 @@ $\text{2) множество решений уравнения } f'(x) = 0 \text
 Тогда:
 
 \begin{enumerate}
-	\item $f$ выпукла вних на $X \Leftrightarrow \forall x \in X \;  f'(x) \geq 0$
-	\item $f$ выпукла вверх на $X \Leftrightarrow \forall x \in X \; f'(x) \leq 0$
+	\item $f$ выпукла вних на $X \Leftrightarrow \forall x \in X \;  f''(x) \geq 0$
+	\item $f$ выпукла вверх на $X \Leftrightarrow \forall x \in X \; f''(x) \leq 0$
 \end{enumerate}
 
 
@@ -793,7 +795,7 @@ $\text{2) множество решений уравнения } f'(x) = 0 \text
 Прямая $y = b$ называется горизонтальной асимптотой к графику $y = f(x)$ при $x \rightarrow +\infty$, если $\lim_{x \rightarrow +\infty} f(x) = b$
 
 \subsubsection*{Определение.}
-Прямая $x = a$ называется вертикальной асимптотой к графику $y = f(x)$, если хотя бы один из односторонних пределов в точке $a$ бесконечен, то есть $\lim_{x \rightarrow a - 0}f(x) = \infty (\text{в частности} \pm \infty)$ или $\lim_{x \rightarrow x + 0}f(x) = \infty$
+Прямая $x = a$ называется вертикальной асимптотой к графику $y = f(x)$, если хотя бы один из односторонних пределов в точке $a$ бесконечен, то есть $\lim_{x \rightarrow a - 0}f(x) = \infty (\text{в частности} \pm \infty)$ или $\lim_{x \rightarrow a + 0}f(x) = \infty$
 
 
 
