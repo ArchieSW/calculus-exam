@@ -113,6 +113,7 @@
 
 \definecolor{mycyan}{RGB}{201, 212, 255}
 \definecolor{myblack}{RGB}{22, 26, 30}
+\definecolor{mypastel}{RGB}{67, 71, 75}
 
 \begin{tikzpicture}[remember picture,overlay]
 
@@ -139,7 +140,7 @@
 
 	\node [shift={(-5cm,-5cm)}] at (current page.north east) % Revision 2
 	{\begin{tikzpicture}[remember picture, overlay]
-			\draw[fill=myblack] (0,5) -- (1.5,5) -- (5,1.5) -- (5,0) -- cycle ;
+			\draw[fill=mypastel] (0,5) -- (1.5,5) -- (5,1.5) -- (5,0) -- cycle ;
 			\node[inner sep=0pt,rotate=-45] (rev) at (2.9,2.9) {\huge\color{white}\textbf{Издание 1}};
 		\end{tikzpicture}};
 
