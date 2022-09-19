@@ -116,41 +116,41 @@
 
 \begin{tikzpicture}[remember picture,overlay]
 
-\node [align=center] at (current page.north) % upper
-      {\begin{tikzpicture}[remember picture, overlay]
-	  \fill[fill=mycyan] (-10,0) rectangle (10,-0.5);
-	  \node[anchor=north] at (0,-0.5) {\Large\textit{Независимое учебное издание}};
-      \end{tikzpicture}};
-      
-\node [align=center] at (current page.center) % dragon
-      {\begin{tikzpicture}[remember picture, overlay]
-          \node[anchor=center,align=center] at (0,3)
-               {\includegraphics[width=1.2\textwidth]{dragon.png}};
-               % from https://commons.wikimedia.org/wiki/File:DnD_Dragon.png
-      \end{tikzpicture}};
+	\node [align=center] at (current page.north) % upper
+	{\begin{tikzpicture}[remember picture, overlay]
+			\fill[fill=mycyan] (-10,0) rectangle (10,-0.5);
+			\node[anchor=north] at (0,-0.5) {\Large\textit{Независимое учебное издание}};
+		\end{tikzpicture}};
 
-\node [yshift=-5cm] at (current page.center) % title
-      {\begin{tikzpicture}[remember picture, overlay]
-          \fill[fill=mycyan] (-10,-4) rectangle (10 ,0);
-          \node[align=center] at (0,-2)
-               {\resizebox{1.1\linewidth}{!}{\Huge\textbf{Математический анализ}}};
-	       \node[anchor=east,align=right] at (10,-5.5) {\Huge\color{black}\textit{Экзамен 2 семестра}};
-      \end{tikzpicture}};
+	\node [align=center] at (current page.center) % dragon
+	{\begin{tikzpicture}[remember picture, overlay]
+			\node[anchor=center,align=center] at (0,3)
+			{\includegraphics[width=1.1\textwidth]{felix.png}};
+			% from https://commons.wikimedia.org/wiki/File:DnD_Dragon.png
+		\end{tikzpicture}};
 
-\node [shift={(-5cm,-5cm)}] at (current page.north east) % Revision 2
-      {\begin{tikzpicture}[remember picture, overlay]
-          \draw[fill=myblack] (0,5) -- (1.5,5) -- (5,1.5) -- (5,0) -- cycle ;
-          \node[inner sep=0pt,rotate=-45] (rev) at (2.9,2.9) {\huge\color{white}\textbf{Издание 1}};
-      \end{tikzpicture}};
+	\node [yshift=-5cm] at (current page.center) % title
+	{\begin{tikzpicture}[remember picture, overlay]
+			\fill[fill=mycyan] (-10,-4) rectangle (10 ,0);
+			\node[align=center] at (0,-2)
+			{\resizebox{1.1\linewidth}{!}{\Huge\textbf{Математический анализ}}};
+			\node[anchor=east,align=right] at (10,-5.5) {\Huge\color{black}\textit{Экзамен 2 семестра}};
+		\end{tikzpicture}};
 
-\node [align=center] at (current page.south) % bottom
-      {\begin{tikzpicture}[remember picture, overlay]
-          \node[anchor=south west, align=left] at (-10,0.5)
-               {\resizebox{.3\linewidth}{!}
-                 {\Huge\color{black}
-                   \textbf{HSE NN 21ПИ}}};
-               \node[anchor=south east, align=right] at (10,0.5) {\huge\color{black}\textbf{Дмитрий Кутузов}};
-      \end{tikzpicture}};
+	\node [shift={(-5cm,-5cm)}] at (current page.north east) % Revision 2
+	{\begin{tikzpicture}[remember picture, overlay]
+			\draw[fill=myblack] (0,5) -- (1.5,5) -- (5,1.5) -- (5,0) -- cycle ;
+			\node[inner sep=0pt,rotate=-45] (rev) at (2.9,2.9) {\huge\color{white}\textbf{Издание 1}};
+		\end{tikzpicture}};
+
+	\node [align=center] at (current page.south) % bottom
+	{\begin{tikzpicture}[remember picture, overlay]
+			\node[anchor=south west, align=left] at (-10,0.5)
+			{\resizebox{.3\linewidth}{!}
+				{\Huge\color{black}
+					\textbf{HSE NN 21ПИ}}};
+			\node[anchor=south east, align=right] at (10,0.5) {\huge\color{black}\textbf{Дмитрий Кутузов}};
+		\end{tikzpicture}};
 
 \end{tikzpicture}
 
@@ -162,9 +162,9 @@
 
 Отдельная благодарность контрибьюторам и друзьям, которые меня поддерживали:
 \begin{itemize}
-  \item Хадиев Э.И.
-  \item Pasha831
-  \item StasRomanov
+	\item Хадиев Э.И.
+	\item Pasha831
+	\item StasRomanov
 \end{itemize}
 
 \vspace{10mm}
@@ -173,7 +173,7 @@
 	математическому анализу 1 курса Программной Инженерии Высшей
 	Школы Экономики в г. Нижний Новгород. В ней присутствуют
 	большинство теорем с доказательством, которые читает лектор. Книжка
-  содержит материал по курсу с 1.01.2022г. \textbf{Копирование в личных, в том числе и коммерческих целях, a также распространение в сети интернет запрещено.}}
+	содержит материал по курсу с 1.01.2022г. \textbf{Копирование в личных, в том числе и коммерческих целях, a также распространение в сети интернет запрещено.}}
 
 \vspace{5mm}
 
