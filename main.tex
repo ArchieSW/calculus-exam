@@ -6,7 +6,7 @@
 % Исходная версия шаблона --- 
 % https://www.writelatex.com/coursera/latex/3.2
 
-\documentclass[a4paper,12pt]{article}
+\documentclass[a4paper,final,14pt]{article}
 
 %%% Работа с русским языком
 \usepackage{cmap}					% поиск в PDF
@@ -19,23 +19,17 @@
 \usepackage{amsmath,amsfonts,amssymb,amsthm,mathtools} % AMS
 \usepackage{icomma} % "Умная" запятая: $0,2$ --- число, $0, 2$ --- перечисление
 
-%% Номера формул
-%\mathtoolsset{showonlyrefs=true} % Показывать номера только у тех формул, на которые есть \eqref{} в тексте.
-%\usepackage{leqno} % Немуреация формул слева
-
 %% Свои команды
-\DeclareMathOperator{\sgn}{\mathop{sgn}}
-
 %% Перенос знаков в формулах (по Львовскому)
 \newcommand*{\hm}[1]{#1\nobreak\discretionary{}
 {\hbox{$\mathsurround=0pt #1$}}{}}
 
 %%% Работа с картинками
-\usepackage{graphicx}  % Для вставки рисунков
-\graphicspath{{images/}{images2/}}  % папки с картинками
-\setlength\fboxsep{3pt} % Отступ рамки \fbox{} от рисунка
-\setlength\fboxrule{1pt} % Толщина линий рамки \fbox{}
-\usepackage{wrapfig} % Обтекание рисунков текстом
+% \usepackage{graphicx}  % Для вставки рисунков
+% \graphicspath{{images/}{images2/}}  % папки с картинками
+% \setlength\fboxsep{3pt} % Отступ рамки \fbox{} от рисунка
+% \setlength\fboxrule{1pt} % Толщина линий рамки \fbox{}
+% \usepackage{wrapfig} % Обтекание рисунков текстом
 
 %%% Работа с таблицами
 \usepackage{array,tabularx,tabulary,booktabs} % Дополнительная работа с таблицами
@@ -56,18 +50,24 @@
 
 %%% Страница
 \usepackage{extsizes} % Возможность сделать 14-й шрифт
-\usepackage{geometry} % Простой способ задавать поля
-	\geometry{top=25mm} \geometry{bottom=35mm}
-	\geometry{left=35mm}
-	\geometry{right=20mm}
+% \usepackage{geometry} % Простой способ задавать поля
+% 	\geometry{top=25mm} \geometry{bottom=35mm}
+% 	\geometry{left=35mm}
+% 	\geometry{right=20mm}
  %
-\usepackage{fancyhdr} % Колонтитулы
- 	\pagestyle{fancy}
- 	\renewcommand{\headrulewidth}{0mm}  % Толщина линейки, отчеркивающей верхний колонтитул
- 	\rhead{Exam}
- 	\chead{Calculus}
- 	\lhead{\today}
- 	% \cfoot{Нижний в центре} % По умолчанию здесь номер страницы
+\usepackage{setspace}
+\usepackage{indentfirst}
+\usepackage{geometry}
+\geometry{
+  a4paper,
+  left=20mm,top=15mm,right=20mm,bottom=15mm,
+  headheight=0pt,headsep=0mm,foot=0pt,footskip=13mm,
+  includeheadfoot
+}
+\linespread{1.05}
+\raggedbottom
+\sloppy
+
 
 \usepackage{setspace} % Интерлиньяж
 %\onehalfspacing % Интерлиньяж 1.5
@@ -102,24 +102,88 @@
 \title{Ответы на билеты по математическому анализу}
 \date{\today}
 
+
+% \usepackage{lmodern}         % for the looks
+\usepackage{tikz}            % the graphics
+\usepackage{textcomp}        % for \textregistered
+
 \begin{document} % конец преамбулы, начало документа
 
-\maketitle
+\thispagestyle{empty}
+
+\definecolor{mycyan}{RGB}{201, 212, 255}
+\definecolor{myblack}{RGB}{22, 26, 30}
+\definecolor{mypastel}{RGB}{67, 71, 75}
+
+\begin{tikzpicture}[remember picture,overlay]
+
+	\node [align=center] at (current page.north) % upper
+	{\begin{tikzpicture}[remember picture, overlay]
+			\fill[fill=mycyan] (-10,0) rectangle (10,-0.5);
+			\node[anchor=north] at (0,-0.5) {\Large\textit{Независимое учебное издание}};
+		\end{tikzpicture}};
+
+	\node [align=center] at (current page.center) % dragon
+	{\begin{tikzpicture}[remember picture, overlay]
+			\node[anchor=center,align=center] at (0,3)
+			{\includegraphics[width=1.1\textwidth]{felix.png}};
+			% from https://commons.wikimedia.org/wiki/File:DnD_Dragon.png
+		\end{tikzpicture}};
+
+	\node [yshift=-5cm] at (current page.center) % title
+	{\begin{tikzpicture}[remember picture, overlay]
+			\fill[fill=mycyan] (-10,-4) rectangle (10 ,0);
+			\node[align=center] at (0,-2)
+			{\resizebox{1.1\linewidth}{!}{\Huge\textbf{Математический анализ}}};
+			\node[anchor=east,align=right] at (10,-5.5) {\Huge\color{black}\textit{Экзамен 2 семестра}};
+		\end{tikzpicture}};
+
+	\node [shift={(-5cm,-5cm)}] at (current page.north east) % Revision 2
+	{\begin{tikzpicture}[remember picture, overlay]
+			\draw[fill=mypastel] (0,5) -- (1.5,5) -- (5,1.5) -- (5,0) -- cycle ;
+			\node[inner sep=0pt,rotate=-45] (rev) at (2.9,2.9) {\huge\color{white}\textbf{Издание 1}};
+		\end{tikzpicture}};
+
+	\node [align=center] at (current page.south) % bottom
+	{\begin{tikzpicture}[remember picture, overlay]
+			\node[anchor=south west, align=left] at (-10,0.5)
+			{\resizebox{.3\linewidth}{!}
+				{\Huge\color{black}
+					\textbf{HSE NN 21ПИ}}};
+			\node[anchor=south east, align=right] at (10,0.5) {\huge\color{black}\textbf{Дмитрий Кутузов}};
+		\end{tikzpicture}};
+
+\end{tikzpicture}
 
 \newpage
+
+Главный редактор -- Кутузов Д.Н.
+
+\vspace{5mm}
+
+Отдельная благодарность контрибьюторам и друзьям, которые меня поддерживали:
+\begin{itemize}
+	\item Хадиев Э.И.
+	\item Pasha831
+	\item StasRomanov
+\end{itemize}
+
+\vspace{10mm}
 
 \textit{Данная книжка создана с целью облегчения подготовки к экзамену по
 	математическому анализу 1 курса Программной Инженерии Высшей
 	Школы Экономики в г. Нижний Новгород. В ней присутствуют
 	большинство теорем с доказательством, которые читает лектор. Книжка
-	содержит материал по курсу с 1.01.2022г. Копирование в личных, в том числе и коммерческих целях и
-	распространение в сети интернет запрещено.}
+	содержит материал по курсу с 1.01.2022г. \textbf{Копирование в личных, в том числе и коммерческих целях, a также распространение в сети интернет запрещено.}}
+
+\vspace{5mm}
+
 
 \newpage
 
 
 {
-	\hypersetup{linkcolor=black}
+	\hypersetup{linkcolor=blue}
 	\tableofcontents
 	\newpage
 }
